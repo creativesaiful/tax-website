@@ -57,32 +57,74 @@ class NoticeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Notice $notice)
+    public function show( $id)
     {
-        //
+      
+        $notice = Notice::findOrfail($id);
+        
+        return view('admin.pages.notice-show', compact('notice')) ;
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Notice $notice)
+    public function edit($id)
     {
-        //
+        $notice = Notice::findOrfail($id);
+        return view('admin.pages.notice-edit', compact('notice'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateNoticeRequest $request, Notice $notice)
+    public function update(UpdateNoticeRequest $request, $id)
     {
-        //
+        $notice = Notice::findOrfail($id);
+
+     
+
+        if ($request->file_path) {
+            $image = $request->file('file_path');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('storage/notices'), $imageName); 
+
+        }
+
+        $old_img = $notice->file_path; 
+        if (file_exists('storage/notices/'.$old_img) && $old_img!=null) {
+            unlink('storage/notices/'.$old_img);
+        }
+
+        
+      
+
+        $notice->update([
+            'title' => $request->title,
+            'description' => $request->description ?? null,
+            'file_path' => $imageName ?? null
+        ]);
+
+        Toastr::success('Notice updated successfully', 'Success');
+
+        return redirect()->route('notices');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Notice $notice)
+    public function destroy($id)
     {
-        //
+        $notice = Notice::findOrfail($id);
+        $old_img = $notice->file_path; 
+        if (file_exists('storage/notices/'.$old_img) && $old_img!=null) {
+            unlink('storage/notices/'.$old_img);
+        }
+
+        $notice->delete();
+
+        Toastr::error('Notice deleted successfully', 'Success');
+
+        return redirect()->route('notices');
+
     }
 }

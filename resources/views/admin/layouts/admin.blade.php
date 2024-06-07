@@ -98,7 +98,7 @@
          <script src="{{ asset('assets/libs/chart-js/Chart.bundle.min.js')}}"></script>
 
           <!-- Init js -->
-        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
+      
 
         <!-- App js -->
         <script src="{{ asset('assets/js/app.min.js')}}"></script>

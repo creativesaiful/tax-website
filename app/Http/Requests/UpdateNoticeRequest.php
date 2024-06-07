@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateNoticeRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class UpdateNoticeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth::check();
     }
 
     /**
@@ -22,7 +23,9 @@ class UpdateNoticeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required',
+            'description' => 'nullable',
+            'file_path' => 'nullable|mimes:jpg,png,pdf',
         ];
     }
 }
