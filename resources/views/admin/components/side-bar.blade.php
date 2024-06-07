@@ -24,9 +24,9 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href=" ">Notices</a></li>
+                        <li><a href="{{ route('notices')}}">Notices</a></li>
                         
-                        <li><a href=" ">Add Notice</a></li>
+                        <li><a href="{{ route('notices.create')}}">Add Notice</a></li>
                          
                     </ul>
                 </li>

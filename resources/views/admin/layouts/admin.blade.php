@@ -16,8 +16,9 @@
         <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/icons.min.css')}} " rel="stylesheet" type="text/css" />
         <link href=" {{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
-        @stack('css')
+        @yield('css')
 
     </head>
 
@@ -53,7 +54,7 @@
                                     <div class="page-title-right">
                                         
                                     </div>
-                                    <h4 class="page-title">Dashboard</h4>
+                                    <h4 class="page-title">@yield('title')</h4>
                                 </div>
                             </div>
                         </div>     
@@ -102,7 +103,11 @@
         <!-- App js -->
         <script src="{{ asset('assets/js/app.min.js')}}"></script>
 
-        @stack('js')
+     
+        <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
+
+        @yield('js')
         
     </body>
 </html>
