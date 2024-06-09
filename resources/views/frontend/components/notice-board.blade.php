@@ -13,11 +13,8 @@
                 @endforeach
 
 
-
-
             </ul>
-            <a href="#" title="সকল নোটিশ"><button class="form-control"
-                    style="background-color: #609513; color: #fff;width: 100px;">সকল নোটিশ</button></a>
+            <a href="#" title="সকল নোটিশ" class="reg_button">সকল নোটিশ</a>
         </div>
 
     </div>

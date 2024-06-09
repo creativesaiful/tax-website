@@ -10,8 +10,12 @@
 
            <p>{{ $notice->description }}</p>
 
-           <object data="{{ asset('storage/notices/'. $notice->file_path) }}" width="100%" type=""></object>
-           
+
+           @if($notice->file_path)
+            <a href="{{ asset('storage/notices/'. $notice->file_path) }}" target="_blank">ডাউনলোড ফাইল</a>
+            @endif
+         
+
         </div>
 
     </div>
