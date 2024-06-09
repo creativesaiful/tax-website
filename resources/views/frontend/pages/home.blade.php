@@ -14,7 +14,7 @@
         {{-- <div class="row home-card-area">
             <div class="col-md-6 mb-4">
                 <div class="service-box">
-                    <h4>কর অঞ্চল-১৮, ঢাকা বিষয়ে</h4>
+                    <h4>কর অঞ্চল-কুমিল্লা</h4>
                     <div class="d-flex">
                         <div>
                             <img class="service-box-image"
@@ -231,7 +231,7 @@
                 <h5 class="title">মাননীয় অর্থমন্ত্রী</h5>
 
                 <img class="pers-img" alt="মাননীয় অর্থমন্ত্রী"
-                    src="https://www.taxeszone18dhaka.gov.bd/officers/fm.jpg">
+                    src="{{URL::asset('frontend/img/fm.jpg')}}">
                 <p class="pers-description">
                     <strong>আবুল হাসান মাহমুদ আলী, এমপি<br>
                         মাননীয় অর্থমন্ত্রী<br>
@@ -242,7 +242,7 @@
             <div class="block pers">
                 <h5 class="title">চেয়ারম্যান</h5>
                 <img class="pers-img" alt="চেয়ারম্যান"
-                    src="https://www.taxeszone18dhaka.gov.bd/officers/Sr_Secretary_Sir_Abu_Hena_Md_Rahmatul_Muneem.jpg">
+                    src="{{URL::asset('frontend/img/Sr_Secretary_Sir_Abu_Hena_Md_Rahmatul_Muneem.jpg')}}">
                 <p class="pers-description"><strong>আবু হেনা মোঃ রহমাতুল মুনিম, সিনিয়র সচিব<br>
 
                         অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়<br>
@@ -253,13 +253,13 @@
             <div class="block pers">
                 <h5 class="title">কর কমিশনার</h5>
                 <img class="pers-img"
-                    src="https://www.taxeszone18dhaka.gov.bd/officers/bb3b7019bc9490b6356e8a970901b0cc.jpg"
+                    src="{{URL::asset('frontend/img/commissioner.jpg')}}"
                     alt="কর কমিশনার">
                 <p class="pers-description">
                     <strong>
-                        জনাব কাজী লতিফুর রহমান<br>
+                        মোঃ গোলাম কবীর<br>
                         কর কমিশনার<br>
-                        কর অঞ্চল-১৮, ঢাকা </strong>
+                        কর অঞ্চল-কুমিল্লা </strong>
                 </p>
             </div>
             <div class="block static_img_add">
@@ -269,51 +269,40 @@
             <div class="block">
                 <h5 class="title other_title">আভ্যন্তরীণ ই-সেবা</h5>
                 <ul class="list-unstyled">
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
-                            class="mr-2"> <a class="link" href="http://www.nbrepayment.gov.bd/"
-                            title="ই-পেমেন্ট">ই-পেমেন্ট</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
+                            class="mr-2"> <a class="link" href="https://nbr.sblesheba.com/IncomeTax/Payment" title="ই-পেমেন্ট" target="_blank">ই-পেমেন্ট</a></li>
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
                             class="mr-2"><a class="link" href="http://103.48.16.132/echalan/"
-                            title="চালান ভেরিফাই">চালান ভেরিফাই</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
-                            class="mr-2"><a class="link" href="http://www.nbrtaxcalculator.org/"
-                            title="ট্যাক্স ক্যালকুলেটর">ট্যাক্স ক্যালকুলেটর</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
-                            class="mr-2"><a class="link" href="http://www.incometax.gov.bd/"
-                            title="ই-টিআইএন">ই-টিআইএন</a></li>
+                            title="চালান ভেরিফাই" target="_blank">চালান ভেরিফাই</a></li>
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
+                            class="mr-2"><a class="link" href="https://secure.incometax.gov.bd/Registration/Login?ReturnUrl=%2fPreview"
+                            title="ই-টিআইএন" target="_blank">ই-টিআইএন</a></li>
                 </ul>
             </div>
             <div class="block">
                 <h5 class="title other_title">গুরুর্তপূর্ন লিঙ্ক সমূহ</h5>
                 <ul class="list-unstyled">
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
                             class="mr-2"><a class="link" href="http://nbr.gov.bd/"
-                            title="জাতীয় রাজস্ব বোর্ড">জাতীয় রাজস্ব বোর্ড</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
+                            title="জাতীয় রাজস্ব বোর্ড"  target="_blank">জাতীয় রাজস্ব বোর্ড</a></li>
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
                             class="mr-2"><a class="link" href="https://mof.gov.bd/"
-                            title="অর্থ বিভাগ">অর্থ বিভাগ</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
+                            title="অর্থ বিভাগ"  target="_blank">অর্থ বিভাগ</a></li>
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
                             class="mr-2"><a class="link" href="https://mopa.gov.bd/"
-                            title="জনপ্রশাসন মন্ত্রণালয়">জনপ্রশাসন মন্ত্রণালয়</a></li>
-                    <li class="mt-2"><img src="https://www.taxeszone18dhaka.gov.bd/img/bullet_tick.png"
+                            title="জনপ্রশাসন মন্ত্রণালয়"  target="_blank">জনপ্রশাসন মন্ত্রণালয়</a></li>
+                    <li class="mt-2"><img src="{{URL::asset('frontend/img/bullet_tick.png')}}"
                             class="mr-2"><a class="link" href="https://ird.gov.bd/"
-                            title="অভ্যন্তরীণ সম্পদ বিভাগ">অভ্যন্তরীণ সম্পদ বিভাগ</a></li>
+                            title="অভ্যন্তরীণ সম্পদ বিভাগ"  target="_blank">অভ্যন্তরীণ সম্পদ বিভাগ</a></li>
                 </ul>
             </div>
 
 
 
-            <div class="block mb-4">
-                <h5 class="title social_title">সামাজিক যোগাযোগ মাধ্যম</h5>
-                <a class="link" title="" href="#" target="_blank" class="share-buttons">
-                    <img class="img-fluid"
-                        src="https://www.taxeszone18dhaka.gov.bd/img/facebook_full_text.jpeg" alt="">
-                </a>
-            </div>
 
             <div class="block">
                 <h5 class="title">জরুরি হটলাইন</h5>
-                <p><img alt="জরুরি হটলাইন" src="https://www.taxeszone18dhaka.gov.bd/img/National-Helpline.jpg"
+                <p><img alt="জরুরি হটলাইন" src="{{URL::asset('frontend/img/National-Helpline.jpg')}}"
                         class="img-fluid"></p>
             </div>
 

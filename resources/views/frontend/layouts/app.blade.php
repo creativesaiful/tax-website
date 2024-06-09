@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>কর কমিশনারের কার্যালয়, কর অঞ্চল-১৮, ঢাকা</title>
+    <title>কর অঞ্চল-কুমিল্লা</title>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
 
     <!-- Basic Page Needs================================================== -->
@@ -12,7 +12,7 @@
 
     <meta name="description" content="">
 
-    <meta name="author" content="">
+    <meta name="author" content="কর অঞ্চল-কুমিল্লা">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" href="{{ asset('frontend/img/logo.png') }}" type="image/x-icon">
     <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="d-flex credit">
                 <p>উন্নয়ন এবং বাস্তবায়নঃ</p>
-                &nbsp;কর কমিশনারের কার্যালয় কর অঞ্চল-১৮, ঢাকা।
+                &nbsp;কর কমিশনারের কার্যালয়, কর অঞ্চল-কুমিল্লা।
                  
             </div>
         </div>
