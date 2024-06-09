@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+ @extends('frontend.layouts.app')
 
 @section('content')
 <div class="notice-board">
@@ -10,14 +10,12 @@
 
            <p>{{ $notice->description }}</p>
 
-
            @if($notice->file_path)
             <a href="{{ asset('storage/notices/'. $notice->file_path) }}" target="_blank">ডাউনলোড ফাইল</a>
             @endif
-         
-
+                
         </div>
 
     </div>
 </div>
-@endsection
+ @endsection

@@ -49,10 +49,20 @@
     <div style="background-color: #2e9844; margin-bottom: 5px;" class="container">
         <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"
             scrollamount="3"direction="left">
+            
+            @php
+                $latestNotices = \App\Models\Notice::orderBy('id', 'desc')->take(5)->get();
+            @endphp
+
+            @foreach ($latestNotices as $notice)
             <img width="16px" src="{{asset('frontend/img/hand.png')}}" class="mr-2">
             <a style="font-size: 16px;color: #ffffff;"
-                href="#">নিয়োগ বিজ্ঞপ্তি</a>
+            href="{{ route('notice.preview', $notice->id) }}" target="_blank"> {{ $notice->title }}</a>
+            @endforeach
+          
 
         </marquee>
+
+        
     </div>
 </div>

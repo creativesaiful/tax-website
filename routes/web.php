@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 
 require_once __DIR__.'/jetstream.php';
 
@@ -21,9 +22,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.pages.dashboard');
-    })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('admin.pages.dashboard');
+    // })->name('dashboard');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('admin/logout', [DashboardController::class, 'logout'])->name('admin.logout');
 
 
     Route::get('/notices', [NoticeController::class, 'index'])->name('notices');

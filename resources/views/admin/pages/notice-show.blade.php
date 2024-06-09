@@ -19,7 +19,7 @@
             @if ($notice->file_path)
 
                 @if (Str::contains($notice->file_path, '.pdf'))
-                    {{-- <iframe src="{{ asset('storage/notices/'. $notice->file_path) }}" width="100%"></iframe> --}}
+                    <iframe src="{{ asset('storage/notices/'. $notice->file_path) }}" width="100%"></iframe>
                 @else
                     <img src="{{ asset('storage/notices/'. $notice->file_path) }}" width="100%">
                 @endif

@@ -32,8 +32,17 @@
 
                 <div class="dropdown-divider"></div>
 
+
+                    
+                {{-- <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+
+                    <input type="submit" class="dropdown-item notify-item" value="Logout">
+                </form> --}}
+
+
                 <!-- item-->
-                <a href="{{ route('logout') }}" class="dropdown-item notify-item">
+                <a href="{{ route('admin.logout') }}" class="dropdown-item notify-item">
                     <i class="fe-log-out"></i>
                     <span>Logout</span>
                 </a>
